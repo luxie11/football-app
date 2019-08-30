@@ -1,0 +1,33 @@
+.player-name{
+    text-align: left;
+    width: 25%;
+}
+
+.nationality{
+    text-align: left;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.player-club{
+    width: 45%;
+    text-align: left;
+}
+
+.player-goals{
+    width: 10%;
+}
+
+.nationality > img{
+    width: 50px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.matchday-column{
+    text-align: center;
+    font-size: 19px;
+    color:#ff7b28;
+    font-weight: 700;
+}

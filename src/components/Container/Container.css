@@ -1,0 +1,13 @@
+.container{
+    width: 85% !important;
+    float: left;
+    position: relative;
+    padding: 30px;
+    max-width: none !important;
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}

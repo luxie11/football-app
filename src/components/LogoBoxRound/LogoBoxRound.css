@@ -1,0 +1,25 @@
+.logo-box{
+    width: 100%;
+}
+
+.logo-div{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #1a1a24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0D0D12;
+}
+
+.logo{
+    height: 110px;
+    padding: 10px;
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

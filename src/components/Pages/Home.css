@@ -1,0 +1,18 @@
+.table-div{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.table-div:not(:first-child){
+    padding-top: 50px;
+}
+
+.league-title{
+    display: flex;
+    align-items: center;
+}
+
+.flag-icon{
+    height: 20px;
+    width: 50px;
+}

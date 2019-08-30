@@ -1,0 +1,153 @@
+table{
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+thead > tr {
+    background-color: #1a1a24;
+    height: 50px;
+}
+
+tbody{
+    font-weight: 600;
+}
+
+tr{
+    height: 48.5px;
+}
+
+th{
+    font-size: 18px;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
+}
+  
+tbody > tr:nth-child(odd) {
+    background-color: rgb(31, 31, 40);
+}
+
+tbody > tr:nth-child(even) {
+    background-color: rgb(36, 38, 48);
+}
+
+.live-label{
+    background: red;
+    padding: 3px 10px;
+}
+
+.box > table{
+    border-radius:0px 0px 10px 10px;
+}
+
+.time{
+    width: 20%;
+}
+
+.status, .versus-div{
+    width: 10%;
+}
+
+.team-name{
+    width: 30%;
+}
+
+.team-name{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+.team-icon{
+    width: 30px;
+    height: 35px;
+    margin-right: 20px;
+}
+
+.fixture-team-name{
+    width: 40%;
+}
+
+.fixture-result{
+    width: 20%;
+}
+
+.league-row{
+    cursor: pointer;
+}
+
+.league-row:hover{
+    background-color: rgb(15, 17, 21);
+}
+
+.player-position{
+    color:#ff7b28;
+    width: 20%;
+    text-align: left;
+}
+
+.player-number{
+    width: 10%;
+}
+
+td.player-number, td.player-date, td.player-age { 
+    color:#908e90;
+}
+
+.player-nationality{
+    width: 10%;
+    text-align: left;
+}
+
+.player-nationality > img{
+    height: 25px;
+    width: 50px;
+}
+
+.player-name{
+    width: 25%;
+    text-align: left;
+    font-weight: 600;
+}
+
+.player-date{
+    width: 25%;
+    text-align: center;
+}
+
+.player-age{
+    width: 15%;
+    text-align: center;
+}
+
+.fixture-club-result{
+    width: 5%;
+}
+
+.fixture-label{
+    width: 15%;
+}
+
+.fixture-label > div{
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.next-match-home-team, .next-match-away-team{
+    width: 30%;
+}
+
+.next-match-home-team,.next-match-away-team{
+    text-align: center;
+}
+
+
+.next-match-time{
+    width: 30%;
+}

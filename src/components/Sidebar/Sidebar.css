@@ -1,0 +1,14 @@
+.sidebar{
+    height: 100%;
+    width:15%;
+    background-color: rgb(23,25,32);
+    position: relative;
+    float: left;
+    padding-top: 100px;
+}
+
+.sidebar-navigation{
+    border-bottom: 1px solid rgba(119, 118, 120, 0.2);
+    border-top: 1px solid rgba(119, 118, 120, 0.2);
+    padding:10px 0px;
+}
