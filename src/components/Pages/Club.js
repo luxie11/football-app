@@ -9,6 +9,7 @@ import {
 } from '../../actions';
 import './Club.css';
 import countryCode from '../countryCode';
+import history from '../history';
 
 import Header from '../Header';
 import InformationBox from '../InformationBox/InformationBox';
@@ -20,20 +21,23 @@ import Row from '../Row';
 import ShortenedTable from '../Tables/ShortenedTable';
 import ClubDetailsBox from '../ClubDetailsBox/';
 import PlayersTable from '../Tables/PlayersTable';
+import GoBack from '../Button/GoBack';
 
 class Club extends Component{
 
     componentDidMount(){
         this.props.clearClubInformation();
-        setTimeout(()=>{
-            this.fetchInformation();
-        }, 3000)
+        if(!this.props.selectedClub){
+            history.push(`/leagues/${this.props.match.params.name}`)
+        } else{
+            setTimeout(()=>{
+                this.fetchInformation();
+            }, 3000)
+        }
     }
 
     fetchInformation(){
-        if(!this.props.standings){
-            this.props.getLeagueStandings(this.props.selectedClub.leagueID)
-        }
+
         this.props.getClubInformation(this.props.selectedClub.clubID);
         this.props.getClubFixtures(this.props.selectedClub.clubID);
         this.props.getClubNextMatches(this.props.selectedClub.clubID);
@@ -88,6 +92,12 @@ class Club extends Component{
                 </tr>
             )
         })
+    }
+    
+    renderGoBackButton(){
+        if(history.location.pathname !== '/'){
+            return <GoBack />
+        } 
     }
 
     renderNextMatcesTable(){
@@ -173,6 +183,7 @@ class Club extends Component{
         }
         return(
             <Fragment>
+                <GoBack />
                 <Row alignCenter="true">
                     <Column col="4">
                         <Column col="4">

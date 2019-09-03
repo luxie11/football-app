@@ -18,7 +18,7 @@ class PlayersTable extends Component{
             const age = player.dateOfBirth ? this.calculateAge(player.dateOfBirth) : '';
             if(player.role === 'PLAYER')
                 return(
-                    <tr>
+                    <tr key={player.name}>
                         <td className="player-number">{player.shirtNumber}</td>
                         <td className="player-nationality">
                             <img

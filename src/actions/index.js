@@ -9,7 +9,10 @@ import {
     SET_SELECTED_CLUB,
     GET_CLUB_PREV_MATCH,
     GET_CLUB_NEXT_MATCHES,
-    CLEAR_CLUB_INFORMATION
+    CLEAR_CLUB_INFORMATION,
+    SET_VIEWPORT,
+    SET_MOBILE_MENU_STATE,
+    SET_MOBILE_MENU_STATE_FALSE
 } from './types';
 import football from '../apis/football';
 import football_second from '../apis/football_second';
@@ -133,5 +136,24 @@ export const getClubNextMatches = (id) =>{
 export const clearClubInformation = () =>{
     return{
         type:CLEAR_CLUB_INFORMATION
+    }
+}
+
+export const setViewPort = (windowWidth) =>{
+    return{
+        type: SET_VIEWPORT,
+        payload: windowWidth
+    }
+}
+
+export const setMobileMenuState = () =>{
+    return{
+        type:SET_MOBILE_MENU_STATE
+    }
+}
+
+export const setMobileMenuStateToFalse = () =>{
+    return{
+        type: SET_MOBILE_MENU_STATE_FALSE
     }
 }

@@ -8,6 +8,7 @@ import Sidebar from './Sidebar/Sidebar';
 import Home from './Pages/Home';
 import Leagues from './Pages/Leagues'
 import Club from './Pages/Club';
+import HeadToHead from './Pages/HeadToHead';
 
 
 const App = () =>{
@@ -19,6 +20,7 @@ const App = () =>{
                     <Route path="/" exact component={Home} />
                     <Route path="/leagues/:name" exact component={Leagues} />
                     <Route path="/leagues/:name/:club" exact component={Club} />
+                    <Route path="/leagues/:name/:club" exact component={HeadToHead} />
                 </Switch>
             </Router>
         </Fragment>

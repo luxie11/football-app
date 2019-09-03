@@ -1,0 +1,31 @@
+.mobile-menu {
+    display: inline-block;
+    cursor: pointer;
+    right: 20px;
+    position: absolute;
+}
+
+.bar-up, .bar-center, .bar-down {
+    width: 30px;
+    height: 5px;
+    background-color: #777678;
+    margin: 6px 0;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.change .bar-up {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: #ff7b28;
+}
+
+.change .bar-center {
+    opacity: 0;
+}
+
+.change .bar-down {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: #ff7b28;
+}

@@ -1,10 +1,23 @@
 import React from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import MenuIcon from '../MenuIcon';
+import { connect } from 'react-redux';
+import { 
+    setViewPort
+} from '../../actions';
 
 import history from '../history';
 
 class Header extends React.Component{
+
+    componentDidMount(){
+        window.addEventListener('resize', this.onWindowChange);
+    }
+
+    onWindowChange = () =>{
+       this.props.setViewPort(window.innerWidth)
+    }
 
     renderBreadcrum(){
         const path = history.location.pathname;
@@ -21,26 +34,53 @@ class Header extends React.Component{
             if(path === ""){
                 return null;
             }
+            if(path === "leagues"){
+                fullPath.push("leagues");
+                return ( 
+                    <React.Fragment key={path}>
+                        <span key={path} className="breadcrum-item">{pathCapitalized.join(' ')}</span>
+                    </React.Fragment>
+                )
+            }
             fullPath.push(path);
             return( 
                 <React.Fragment key={path}>
                     <i className="fa fa-chevron-right arrow"></i>
-                    <Link key={path} className="breadcrum-item" to={`/${fullPath.join('/')}`}>{pathCapitalized.join(' ')}</Link>
+                    <Link 
+                        key={path} 
+                        className={`breadcrum-item`} 
+                        to={`/${fullPath.join('/')}`}
+                    >{pathCapitalized.join(' ')}</Link>
                 </React.Fragment>
             )
         })
     }
 
+    renderMenuIcon(){
+        if(this.props.windowWidth > 1000){
+            return;
+        }
+        return( <MenuIcon /> );
+    }
+
     render(){
         return(
-            <div className="header">
+            <header className="header">
+                {this.renderMenuIcon()}
                 <div className="breadcrum">
                     {this.renderBreadcrum()}
                 </div>
-               
-            </div>
+            </header>
         )
     }
 }
 
-export default Header;
+const mapStateToProps = (state) =>{
+    return{
+        windowWidth: state.viewPort.windowWidth
+    }
+}
+
+export default connect(mapStateToProps,{
+    setViewPort
+})(Header);
