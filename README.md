@@ -1,7 +1,7 @@
 <h2>Project</h2>
-  An application used to show cryptocurrency values. App built with <br>
-  &#10687; React<br>, 
-  &#10687; Redux<br>,
+  An application used to show football scores, information about club, league details. App built with <br>
+  &#10687; React,<br> 
+  &#10687; Redux,<br>
   &#10687; React-Router<br>
 
 <h2>Installation and Setup Instructions</h2>
