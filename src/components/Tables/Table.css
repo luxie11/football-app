@@ -158,8 +158,45 @@ td.player-number, td.player-date, td.player-age {
     }
 }
 
-@media only screen and  (min-width:410px) and (max-width: 519px) {
-    th,td{
+@media only screen and (max-width: 500px) {
+    .breadcrum-item{
+        color:#777678; 
+        font-size: 16px;
+    }
+    td, th{
+        padding: 3px;
         font-size: 12px;
+    }
+
+    .player-nationality > img {
+        height: 20px;
+        width: 30px;
+    }
+
+    .nationality > img{
+        display: none;
+    }
+
+    .team-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    .team-name{
+        height: 48.5px;
+    }
+
+    .nationality {
+        min-height: 45px;
+    }
+
+    .breadcrum {
+        display: inline-block;
+        width: 80%;
+    }
+    
+    .table-div{
+        width: 100%
     }
 }
