@@ -25,7 +25,7 @@ To Visit App:
 localhost:3000
 
 <br>
-https://football-score-app.herokuapp.com
+https://football-scores-app.herokuapp.com
 
 PROBLEM -> Only 10 requests per minute
 
